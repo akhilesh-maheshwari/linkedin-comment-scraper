@@ -1,0 +1,60 @@
+{
+  "title": "LinkedIn Post Commenter Scraper",
+  "description": "Scrape commenters from LinkedIn posts",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "posts": {
+      "title": "Posts",
+      "type": "array",
+      "description": "Enter LinkedIn post URLs (e.g. https://www.linkedin.com/posts/... or https://www.linkedin.com/feed/update/...)",
+      "editor": "stringList",
+      "items": {
+        "type": "string"
+      },
+      "prefill": ["https://www.linkedin.com/posts/google_googleio-io25-gemini-activity-7330295765424046080-nSW4"]
+    },
+    "fileName": {
+      "title": "Results File Name",
+      "type": "string",
+      "description": "Name your results file (without extension)",
+      "editor": "textfield",
+      "default": "linkedin-post-commenter-output"
+    },
+    "maxComments": {
+      "title": "Maximum number of comments to scrape per each post",
+      "type": "integer",
+      "description": "Maximum number of comments to fetch per post",
+      "editor": "number",
+      "default": 10
+    },
+    "postedLimit": {
+      "title": "Posted Limit (filter)",
+      "type": "string",
+      "description": "Filter posts by how recently they were posted",
+      "editor": "select",
+      "enum": ["any", "24h", "week", "month", "3months", "6months", "year"],
+      "enumTitles": ["any", "24h", "week", "month", "3months", "6months", "year"],
+      "prefill": "any"
+    },
+    "scrapeReplies": {
+      "title": "Scrape Replies",
+      "type": "boolean",
+      "description": "Whether to scrape replies to comments",
+      "default": false
+    },
+    "profileScraperMode": {
+      "title": "Profile Scraper Mode",
+      "type": "string",
+      "description": "Select the profile scraper mode",
+      "editor": "select",
+      "enum": ["short", "main"],
+      "enumTitles": [
+        "Short (no charge for profile details)",
+        "Main - scrape profile details without expanding profile sections ($0.002 per main profile)"
+      ],
+      "prefill": "short"
+    }
+  },
+  "required": ["posts", "fileName"]
+}
