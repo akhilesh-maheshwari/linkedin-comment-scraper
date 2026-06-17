@@ -1,0 +1,32 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "postUrl",
+          "commenterName",
+          "commenterProfileUrl",
+          "commentText",
+          "commentDate",
+          "replyCount",
+          "profileMode"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "postUrl":             { "label": "Post URL",              "format": "link" },
+          "commenterName":       { "label": "Commenter Name",        "format": "text" },
+          "commenterProfileUrl": { "label": "Commenter Profile URL", "format": "link" },
+          "commentText":         { "label": "Comment Text",          "format": "text" },
+          "commentDate":         { "label": "Comment Date",          "format": "text" },
+          "replyCount":          { "label": "Reply Count",           "format": "text" },
+          "profileMode":         { "label": "Profile Mode",          "format": "text" }
+        }
+      }
+    }
+  }
+}
