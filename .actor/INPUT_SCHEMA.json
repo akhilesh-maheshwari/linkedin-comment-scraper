@@ -27,33 +27,6 @@
       "description": "Maximum number of comments to fetch per post",
       "editor": "number",
       "default": 10
-    },
-    "postedLimit": {
-      "title": "Posted Limit (filter)",
-      "type": "string",
-      "description": "Filter posts by how recently they were posted",
-      "editor": "select",
-      "enum": ["any", "24h", "week", "month", "3months", "6months", "year"],
-      "enumTitles": ["any", "24h", "week", "month", "3months", "6months", "year"],
-      "prefill": "any"
-    },
-    "scrapeReplies": {
-      "title": "Scrape Replies",
-      "type": "boolean",
-      "description": "Whether to scrape replies to comments",
-      "default": false
-    },
-    "profileScraperMode": {
-      "title": "Profile Scraper Mode",
-      "type": "string",
-      "description": "Select the profile scraper mode",
-      "editor": "select",
-      "enum": ["short", "main"],
-      "enumTitles": [
-        "Short (no charge for profile details)",
-        "Main - scrape profile details without expanding profile sections ($0.002 per main profile)"
-      ],
-      "prefill": "short"
     }
   },
   "required": ["posts", "fileName"]
