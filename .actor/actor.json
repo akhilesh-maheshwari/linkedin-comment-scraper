@@ -6,5 +6,85 @@
   "version": "0.0",
   "buildTag": "latest",
   "environmentVariables": {},
-  "dockerfile": "./Dockerfile"
+  "dockerfile": "./Dockerfile",
+  "output": {
+    "schema": {
+      "views": {
+        "overview": {
+          "title": "Results Overview",
+          "transformation": {
+            "fields": [
+              "publicIdentifier",
+              "linkedInIdentifier",
+              "memberIdentifier",
+              "linkedInUrl",
+              "firstName",
+              "lastName",
+              "headline",
+              "summary",
+              "location",
+              "followerCount",
+              "premium",
+              "is_open_profile",
+              "is_creator",
+              "is_influencer",
+              "is_self",
+              "is_relationship",
+              "websites",
+              "connections_count",
+              "birthdate",
+              "positions",
+              "schools",
+              "skills",
+              "languages",
+              "recommendations",
+              "volunteering_experience",
+              "photoUrl",
+              "backgroundUrl",
+              "request_type",
+              "reaction",
+              "reaction_type",
+              "comment"
+            ]
+          },
+          "display": {
+            "component": "table",
+            "properties": {
+              "publicIdentifier":       { "label": "Public Identifier",        "format": "text" },
+              "linkedInIdentifier":     { "label": "LinkedIn Identifier",      "format": "text" },
+              "memberIdentifier":       { "label": "Member Identifier",        "format": "text" },
+              "linkedInUrl":            { "label": "LinkedIn URL",             "format": "link" },
+              "firstName":              { "label": "First Name",               "format": "text" },
+              "lastName":               { "label": "Last Name",                "format": "text" },
+              "headline":               { "label": "Headline",                 "format": "text" },
+              "summary":                { "label": "Summary",                  "format": "text" },
+              "location":               { "label": "Location",                 "format": "text" },
+              "followerCount":          { "label": "Follower Count",           "format": "number" },
+              "premium":                { "label": "Premium",                  "format": "boolean" },
+              "is_open_profile":        { "label": "Open Profile",             "format": "boolean" },
+              "is_creator":             { "label": "Creator",                  "format": "boolean" },
+              "is_influencer":          { "label": "Influencer",               "format": "boolean" },
+              "is_self":                { "label": "Self",                     "format": "boolean" },
+              "is_relationship":        { "label": "Relationship",             "format": "boolean" },
+              "websites":               { "label": "Websites",                 "format": "text" },
+              "connections_count":      { "label": "Connections Count",        "format": "number" },
+              "birthdate":              { "label": "Birthdate",                "format": "text" },
+              "positions":              { "label": "Positions",                "format": "text" },
+              "schools":                { "label": "Schools",                  "format": "text" },
+              "skills":                 { "label": "Skills",                   "format": "text" },
+              "languages":              { "label": "Languages",                "format": "text" },
+              "recommendations":        { "label": "Recommendations",          "format": "text" },
+              "volunteering_experience":{ "label": "Volunteering Experience",  "format": "text" },
+              "photoUrl":               { "label": "Photo URL",                "format": "link" },
+              "backgroundUrl":          { "label": "Background URL",           "format": "link" },
+              "request_type":           { "label": "Request Type",             "format": "text" },
+              "reaction":               { "label": "Reaction",                 "format": "boolean" },
+              "reaction_type":          { "label": "Reaction Type",            "format": "text" },
+              "comment":                { "label": "Comment",                  "format": "boolean" }
+            }
+          }
+        }
+      }
+    }
+  }
 }
