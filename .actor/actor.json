@@ -7,5 +7,5 @@
   "buildTag": "latest",
   "environmentVariables": {},
   "dockerfile": "./Dockerfile",
-  "output": "./OUTPUT_SCHEMA.json"
+  "output": "OUTPUT_SCHEMA.json"
 }
