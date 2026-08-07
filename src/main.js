@@ -9,7 +9,8 @@ try {
   // ──────────────────────────────
   const input             = await Actor.getInput();
   const serviceTagName    = input.fileName          || '';
-  const posts             = input.posts             || [];
+  const postUrl = input.postUrl || '';
+  const posts   = postUrl ? [postUrl] : [];
   const maxComments       = input.maxComments       ?? 10;
   const postedLimit       = input.postedLimit       || 'any';
   const scrapeReplies     = input.scrapeReplies     || false;
