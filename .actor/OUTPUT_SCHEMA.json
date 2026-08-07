@@ -1,5 +1,6 @@
 {
   "actorOutputSchemaVersion": 1,
+  "properties": {},
   "views": {
     "overview": {
       "title": "Results Overview",
