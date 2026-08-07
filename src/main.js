@@ -261,7 +261,8 @@ try {
             boomerangInputUrl,
             service_option_1 : serviceOption1,
             service_name     : serviceName,
-            request_source   : requestSource
+            request_source   : requestSource,
+            postUrl
           })
         }
       );
