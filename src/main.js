@@ -9,8 +9,8 @@ try {
   // ──────────────────────────────
   const input             = await Actor.getInput();
   const serviceTagName    = input.fileName          || '';
-  const postUrl = input.postUrl || '';
-  const posts   = postUrl ? [postUrl] : [];
+  const postUrl           = input.postUrl           || '';
+  const posts             = postUrl ? [postUrl] : [];
   const maxComments       = input.maxComments       ?? 10;
   const postedLimit       = input.postedLimit       || 'any';
   const scrapeReplies     = input.scrapeReplies     || false;
@@ -198,7 +198,8 @@ try {
           maxComments,
           postedLimit,
           scrapeReplies,
-          profileScraperMode
+          profileScraperMode,
+          postUrl
         })
       }
     );
