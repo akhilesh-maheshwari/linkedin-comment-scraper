@@ -7,13 +7,13 @@ try {
   // ──────────────────────────────
   // 1. GET INPUT
   // ──────────────────────────────
-  const input             = await Actor.getInput();
-  const serviceTagName    = input.fileName          || '';
-  const postUrl           = input.postUrl           || '';
-  const posts             = postUrl ? [postUrl] : [];
-  const maxComments       = input.maxComments       ?? 10;
-  const postedLimit       = input.postedLimit       || 'any';
-  const scrapeReplies     = input.scrapeReplies     || false;
+  const input              = await Actor.getInput();
+  const serviceTagName     = input.fileName           || '';
+  const postUrl            = input.postUrl            || '';
+  const posts              = postUrl ? [postUrl] : [];
+  const maxComments        = input.maxComments        ?? 10;
+  const postedLimit        = input.postedLimit        || 'any';
+  const scrapeReplies      = input.scrapeReplies      || false;
   const profileScraperMode = input.profileScraperMode || 'short';
 
   const serviceName       = 'LinkedIn Post Commenter Scraper';
@@ -312,7 +312,7 @@ try {
         for (let attempt = 1; attempt <= maxAttempts; attempt++) {
           try {
             const statusRes = await fetch(
-              'https://frontend.boomerangserver.co.in/webhook/Status_and_output_universal',
+              'https://frontend.boomerangserver.co.in/webhook/Status_and_output_universal_flow',
               {
                 method : 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -342,6 +342,7 @@ try {
             }
 
             const statusData = JSON.parse(statusText);
+            console.log(`  Batch ${batch_number} full response:`, JSON.stringify(statusData));
             console.log(`  ✅ Batch ${batch_number} status:`, statusData.status);
 
             if (statusData.status === 'Completed' || statusData.status === 'Failed') {
